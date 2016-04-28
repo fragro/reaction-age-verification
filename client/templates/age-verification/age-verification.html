@@ -1,0 +1,23 @@
+<template name="ageverificationsettings">  
+  {{#autoForm
+    schema="ReactionCore.Schemas.AgeVerificationConfig"
+    doc=ageVerification
+    id="age-verification-add-form"
+    resetOnSuccess=false
+    }}
+
+    <div class="panel panel-default">
+      <div class="panel-heading">Age Verification</div>
+      <div class="panel-body">
+        <div class="col-md-12">
+          {{>afQuickField name='age' autofocus=''}}
+        </div>
+        <div class="pull-right">
+          <button type="submit" data-action="save-age-verification" class="btn btn-primary">Submit</button>
+          <button type="cancel" class="btn btn-primary cancel">Cancel</button>
+        </div>
+      </div>
+    </div>
+    {{/autoForm}}
+
+</template>
